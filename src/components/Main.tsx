@@ -2,6 +2,7 @@
 import { useAppContext } from "@/app/provider"
 import Image from "next/image";
 import { useEffect,useState } from "react";
+import Post from "./ui/post";
 export default function Main(){
     const {post} = useAppContext();
     const [,setRefresh] = useState<boolean>(false);
@@ -15,16 +16,7 @@ export default function Main(){
                 {post.length===0 ? (
                      <p className="text-gray-500 text-center">No posts available</p>
                 ):(post.map((p)=>{
-                    return <div key={p.id} className="bg-white text-black p-4 m-4">
-                        <p>{p.caption}</p>
-                        <div className="flex">
-                            {p.recentFiles.map((f)=>{
-                                return <div key={f} className="m-2">
-                                    <Image src={f} alt ="jimagi"width={200} height={200} />
-                                </div>
-                            })}
-                        </div>
-                    </div>
+                    return <Post key={p.id} id={p.id} caption={p.caption} recentFiles={p.recentFiles}/>
                 }))}
 
             </main>
