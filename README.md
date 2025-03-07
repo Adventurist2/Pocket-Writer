@@ -8,6 +8,7 @@ Postify is a modern and responsive Next.js-based social media post viewer that a
 Install the required depencies
 ```bash
 git clone https://github.com/Adventurist2/Pocket-Writer.git
+cd Pocket-Writer
 npm install  # or yarn install
 ```
 
