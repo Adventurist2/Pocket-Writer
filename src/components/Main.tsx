@@ -12,7 +12,7 @@ export default function Main() {
     }, [post]);
 
     return (
-        <div className="h-[90vh] w-screen relative overflow-x-hidden flex justify-center px-4">
+        <div className="h-[90vh] w-screen relative overflow-x-hidden flex justify-center sm:px-4">
             {post.length === 0 ? (
                 <p className="text-gray-500 text-center w-full h-full flex justify-center items-center font-bold">
                     No posts available

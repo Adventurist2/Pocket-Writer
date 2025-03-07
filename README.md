@@ -1,6 +1,15 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+### Description
+Postify is a modern and responsive Next.js-based social media post viewer that allows users to browse and interact with image-based posts. It features a smooth carousel-based image viewer and ensures an optimal viewing experience across devices.
+
 ## Getting Started
+
+Install the required depencies
+```bash
+git clone https://github.com/Adventurist2/Pocket-Writer.git
+npm install  # or yarn install
+```
 
 First, run the development server:
 
@@ -14,7 +23,7 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)  with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
