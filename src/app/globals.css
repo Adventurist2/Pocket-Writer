@@ -29,3 +29,21 @@ body {
   grid-auto-rows: 22rem;
   gap:5px;
 }
+
+.navbar{
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  background-image: linear-gradient(120deg, #1112a5cc, #f72b2b);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.view-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #1d1c1c;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+}

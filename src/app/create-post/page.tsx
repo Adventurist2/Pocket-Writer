@@ -1,9 +1,10 @@
-import { Upload } from "@/components/upload";
+import FileUpload from "@/components/fileUpload";
 export default function App(){
     return (
         <div>
-            <Upload></Upload>
+            <FileUpload></FileUpload>
         </div>
+
     )
 
 }
