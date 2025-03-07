@@ -14,7 +14,7 @@ export default function PostViewer({ id, caption, recentFiles = [] }:newPost) {
                 <div className="h-16 w-full overflow-y-scroll overflow-x-hidden flex-wrap">
                     <span className="font-bold">{caption}</span>
                 </div>
-            <div key={id} className="z-20 flex justify-center items-center w-[35rem] h-[35rem]">
+            <div key={id} className="z-20 flex justify-center items-center sm:w-[35rem] h-[35rem]">
                     <Carousel>
                     {recentFiles.map((src, index) => {
                         
