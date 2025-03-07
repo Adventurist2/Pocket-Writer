@@ -2,7 +2,12 @@ import Image from "next/image";
 import { useState } from "react";
 import PostViewer from "./post-viewer";
 
-export default function Post({ id,caption, recentFiles }) {
+interface newPost {
+    id :number;
+    caption: string;
+    recentFiles: string[];}
+
+export default function Post({ id,caption, recentFiles }:newPost) {
     const [open, setOpen] = useState(false);
     const postDetails = {
         id:id,

@@ -1,9 +1,9 @@
 "use client"
 import { useState,useRef } from "react";
-import storingImages from "@/lib/serve";
+import  storingImages  from "@/lib/actions/serve";
 import { useAppContext } from "@/app/provider";
 import { useRouter } from "next/navigation";
-import { getImage } from "@/lib/serve";
+import { getImage } from "@/lib/actions/serve";
 interface FileBoxProps {
     s: string;
     index: number;

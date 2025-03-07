@@ -2,6 +2,7 @@
 import path from "path";
 import { writeFile, mkdir } from "fs/promises";
 
+//storingImages function is used to store images in the public/uploaded directory
 export default async function storingImages(formData: FormData) {
     const recentFiles: string[] = [];
     const files = formData.getAll("files") as File[];
@@ -30,6 +31,7 @@ export default async function storingImages(formData: FormData) {
     return uploadedObj; 
 }
 
+//getImage function is used to get the image from the url
 export async function getImage(url: string) {
     const uploadDir = path.join(process.cwd(), "public", "uploaded");
 
@@ -45,13 +47,13 @@ export async function getImage(url: string) {
         const buffer = await file.arrayBuffer();
         const bufferData = Buffer.from(buffer);
 
-        const fileExtension = path.extname(url).split("?")[0] || ".jpg"; // Handle query params
+        const fileExtension = path.extname(url).split("?")[0] || ".jpg"; 
         const filename = `${timestamp}${fileExtension}`;
         const filepath = path.join(dest, filename);
 
         await writeFile(filepath, bufferData);
 
-        return `/uploaded/${filename}`; // Relative path for frontend
+        return `/uploaded/${filename}`; 
     }
 
     return await downloadImage(url, uploadDir);

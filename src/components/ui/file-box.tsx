@@ -8,9 +8,8 @@ interface FileBoxProps {
 }
 
 export default function FileBox({ s,index }: FileBoxProps): React.ReactNode {
-        
     
-  return <div className="bg-gray-200 p-2 m-2 text-black">
+  return <div key={index} className="bg-gray-200 p-2 m-2 text-black">
     {s.slice(0, 50)}
     <button className=" cursor-pointer bg-gray-400 p-2 m-2 text-black" onClick={()=>{
         // handleDeleteAtom(index);

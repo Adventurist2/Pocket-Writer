@@ -5,6 +5,12 @@ import path from "path";
 
 const filePath = path.join(process.cwd(), "public", "postArray.json");
 
+interface newPost {
+  id :number;
+  caption: string;
+  recentFiles: string[];
+}
+
 export async function readPosts() {
   try {
     const data = await fs.readFile(filePath, "utf-8");
@@ -19,7 +25,7 @@ export async function readPosts() {
   }
 }
 
-export async function savePost(newPost) {
+export async function savePost(newPost:newPost) {
   try {
     const posts = await readPosts(); 
     posts.unshift(newPost); 

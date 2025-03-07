@@ -35,7 +35,7 @@ export const AppProvider = ({ children }: { children: ReactNode }) => {
   }, [post]);
 
   const addPost = (newPost: PostObject) => {
-    setPost((prevPosts) => [newPost, ...prevPosts]); // ✅ Push at the front
+    setPost((prevPosts) => [newPost, ...prevPosts]); //Pushing  the new post at the front of the array
   };
 
   return (

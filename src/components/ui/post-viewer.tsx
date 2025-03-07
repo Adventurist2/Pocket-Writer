@@ -2,14 +2,19 @@ import React from "react";
 import { Carousel } from "./Carousel";
 import Image from "next/image";
 
-export default function PostViewer({ id, caption, recentFiles = [] }) {
+interface newPost {
+    id :number;
+    caption: string;
+    recentFiles: string[];}
+
+export default function PostViewer({ id, caption, recentFiles = [] }:newPost) {
     return (
         <div className="fixed top-0 left-0 w-screen h-screen transparent z-10 flex justify-center items-center">
             <div className="view-div">
                 <div className="h-16 w-full overflow-y-scroll overflow-x-hidden flex-wrap">
                     <span className="font-bold">{caption}</span>
                 </div>
-            <div className="z-20 flex justify-center items-center w-[35rem] h-[35rem]">
+            <div key={id} className="z-20 flex justify-center items-center w-[35rem] h-[35rem]">
                     <Carousel>
                     {recentFiles.map((src, index) => {
                         
